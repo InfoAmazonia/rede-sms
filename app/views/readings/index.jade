@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title Rede Infoamazonia - SMS Relay
+    link(rel="stylesheet",href="css/normalize.css")
+    link(rel="stylesheet",href="css/skeleton.css")
+    script.
+      setTimeout(function(){
+        window.location.reload();
+      },5000);
+  body
+    .container
+      .row(style="margin-top: 15%")
+        h1 Últimas leituras
+
+        table(class="u-full-width")
+          thead
+            tr
+              th Sensor
+              th Momento da coleta
+              th Parâmetros observados
+          tbody
+            each reading in readings
+              tr
+                td=reading.sensor
+                td=reading.collectedAt
+                td
+                  each parameter in reading.data
+                    if (parameter.unit)
+                      .div=parameter.param + ' (' + parameter.unit + '): ' + parameter.value
+                    else
+                      .div=parameter.param + ': ' + parameter.value

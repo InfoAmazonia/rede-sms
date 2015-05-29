@@ -1,0 +1,43 @@
+{
+  "name": "rede-sms",
+  "version": "0.1.0",
+  "description": "SMS relay server for InfoAmazonia Rede",
+  "main": "app.js",
+  "scripts": {
+    "watch": "NODE_ENV=development ./node_modules/.bin/nodemon --watch lib app.js",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infoamazonia/rede-sms"
+  },
+  "keywords": [
+    "sms",
+    "rede",
+    "infoamazonia",
+    "water",
+    "sensors"
+  ],
+  "author": "Vitor George <vitor.george@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/infoamazonia/rede-sms/issues"
+  },
+  "homepage": "https://github.com/infoamazonia/rede-sms",
+  "devDependencies": {
+    "nodemon": "^1.3.7"
+  },
+  "dependencies": {
+    "async": "^1.0.0",
+    "express": "^4.12.4",
+    "hbs": "^3.0.1",
+    "hilink": "0.0.1",
+    "jade": "^1.10.0",
+    "moment": "^2.10.3",
+    "mongoose": "^4.0.4",
+    "superagent": "^1.2.0",
+    "underscore": "^1.8.3",
+    "xml2js": "^0.4.8",
+    "xmlbuilder": "^2.6.4"
+  }
+}
